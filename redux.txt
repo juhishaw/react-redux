@@ -1,0 +1,6 @@
+- 3rd party library to manage global state
+- Standalone libraray but east to integrate with reactv apps using react-redux library
+- All global satte is stored in one globally accessible store, which is easy to update using action(like useReducer)
+- Context API + useReducer
+- Classic Redux | Modern redux toolkit
+
