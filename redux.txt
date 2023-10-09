@@ -24,3 +24,29 @@ const store = createStore(rootReducer, applyMiddleware(thunk));
 - We can write code that mutates -- uses Immer library
 - Action creators are automatically created
 - Automatic setup of thunk middleware and devtools
+
+
+### (Context API + useReducer) vs Redux ###
+
+Context API + useReducer
+- Built into react
+- Easy to setup a single Context
+- Set up from scratch
+- Performance optimisation is pain
+- Only react dev tools
+
+- for global state management in small apps
+- Solve simple prop drilling problem
+- When you need to share value which doesnot change very often
+
+Redux
+- Requires additional package
+- More work initially
+- Easy to create additional slices
+- Support middleware for async operations
+- Performance is optimised out of the box
+- Excellent dev tools
+
+- for global state management in large apps
+- When you have complex state with nested objects
+- When you need UI state needs to uopdate frequently
