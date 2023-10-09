@@ -2,11 +2,25 @@
 - Standalone libraray but east to integrate with reactv apps using react-redux library
 - All global satte is stored in one globally accessible store, which is easy to update using action(like useReducer)
 - Context API + useReducer
-- Classic Redux | Modern redux toolkit
+- Classic Redux - depreciated | Modern redux toolkit
 
 ### Mechanism ###
 Event handler in comp --> Action creator function (To automate writing action. Helpful to kepp all possible actions in one central place) --> dispatch
     --> Stor(collection of reducer, action goes here after its created) --> Next State --> Re-render
 
+#### REDUX MIDDLEWARE #### REDUX THUNK ###
+- A fn() that sits b/w dispatching the action and the store. Allow us to run the code after dispatching, but before reaching the reducer in the store
+component -> dispatch -> middleware -> store
+- Go to place for side effects
+- 3rd party package - Redux thunks
+
+const store = createStore(rootReducer, applyMiddleware(thunk));
 
 
+### REDUX Toolkit ###
+- The modern preferred way of writing redux
+- Use Redux best practice
+- Less code
+- We can write code that mutates -- uses Immer library
+- Action creators are automatically created
+- Automatic setup of thunk middleware and devtools
