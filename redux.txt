@@ -4,3 +4,9 @@
 - Context API + useReducer
 - Classic Redux | Modern redux toolkit
 
+### Mechanism ###
+Event handler in comp --> Action creator function (To automate writing action. Helpful to kepp all possible actions in one central place) --> dispatch
+    --> Stor(collection of reducer, action goes here after its created) --> Next State --> Re-render
+
+
+
